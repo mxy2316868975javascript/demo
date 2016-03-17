@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+	var parseQuery = function(query)
+	{
+	    var reg = /([^=&\s]+)[=\s]*([^=&\s]*)/g;
+	    var obj = {};
+	    while(reg.exec(query))
+	    {
+	        obj[RegExp.$1] = RegExp.$2;
+	    }
+	    return obj;
+	}
+	var jerry = parseQuery("name=jerry&age=1");
+	console.log(jerry);
+	 
+	var tom = parseQuery("name= tom &age=12&gender&");
+	console.log(tom);
+	var entityMap = {
+	    "&": "&amp;",
+	    "<": "&lt;",
+	    ">": "&gt;",
+	    '"': '&quot;',
+	    "'": '&#39;',
+	    "/": '/',
+		};
+
+		function escapeHTML(string)
+		{
+		    return String(string).replace(/[&<>"'\/]/g, function (s)
+		    {
+		    return entityMap[s];
+			});
+		};
+		console.log(escapeHTML('<input type="text" name="mobile"> '));
+		function Person(name, age)
+		{
+			this.name = name;
+			this.age = age;
+			this.introduce = function(){
+				return 'I am' + ' ' +name + ',' +' I am'+ ' ' + age+ ' ' + 'years old! ';
+			}
+		}
+		// var jerry = new Person("Jerry", 2);
+		var tom = new Person("Tom", 12);
+		console.log(tom.introduce());
+		var product = multiply(1,2,3,4,5);
+		function multiply()
+		{
+			var result = 1;
+			for(var i=0;i<arguments.length;i++)
+			{
+				result *= arguments[i];
+			}
+			return result;
+		};
+		console.log(product);
+
+	</script>
+	<script>
+	var number = parseInt(Math.random()*1000);
+​console.log(number);
+	</script>
+</body>
+</html>

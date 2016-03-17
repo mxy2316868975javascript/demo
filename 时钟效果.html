@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>时钟</title>
+	<style>
+		body {
+			background: #000;
+			color: #ffffff;
+		}
+		div {
+			display: inline-block;
+			font-size: 24px;
+			
+		}
+	</style>
+	
+	<!-- // 	function mxy(n)
+	// 	{
+	// 		if(n<10)
+	// 		{
+	// 			return '0'+n;
+	// 		}
+	// 		else
+	// 		{
+	// 			return ''+n;
+	// 		}
+	// 	}
+	// 	window.onload = function ()
+	// 	{
+	// 		var aSpan = document.getElementsByTagName('span');
+	// 		// var timer = null;
+	// 		function fn(){
+	// 			var oDate = new Date();
+	// 			var str = mxy(oDate.getHours())+mxy(oDate.getMinutes())+mxy(oDate.getSeconds());
+	// 			// alert(str);
+
+
+	// 			for(var i=0;i<aSpan.length;i++)
+	// 			{
+	// 				aSpan[i].innerHTML = str[i];
+	// 			} 
+	// 		}
+	// 		setInterval(fn,1000);
+	// 		fn();
+
+	// 	} -->
+	 <script>
+	 	window.onload = function ()
+	 	{
+	 		var aDiv = document.getElementsByTagName('div');
+	 		
+	 		function tick()
+	 		{
+	 			var oDate = new Date();
+		 		var str = mxy(oDate.getHours())+mxy(oDate.getMinutes())+mxy(oDate.getSeconds());
+		 		for(var i=0;i<aDiv.length;i++)
+		 		{
+		 			aDiv[i].innerHTML = str.charAt(i);
+		 		}
+	 		};
+	 		setInterval(tick,1000);
+	 		tick();
+	 	}
+	 	function mxy(n)
+	 	{
+	 		if(n<10)
+	 		{
+	 			return '0'+n;
+	 		}
+	 		else 
+	 		{
+	 			return ''+n;
+	 		}
+	 	}
+	 </script>
+</head>
+<body>
+	<div>0</div>
+	<div>0</div>
+	:
+	<div>0</div>
+	<div>0</div>
+	:
+	<div>0</div>
+	<div>0</div>
+	
+</body>
+</html>

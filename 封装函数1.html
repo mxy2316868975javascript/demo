@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>封装函数</title>
+	<script>
+	winodw.onload = function ()
+	{};
+	function getParent(oParent,aClass)
+	{
+		var aEle = oParent.getElementsByTagName('*');
+		var aresult = null;
+
+		for(var i=0;i,aEle.length;i++)
+		{
+			if(aEle[i].classNmae == 'aClass')
+			{
+				aresult.push(aEle[i]);
+			}
+		}
+		return aresult;
+	}
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		var result = 0;
+		// 求和
+		function show()
+		{
+			for(var i=0;i<arguments.length;i++)
+			{
+				result += arguments[i];
+			}
+			return result;
+		}
+		console.log(show(12,52,65));
+		// 求积
+		function mxy()
+		{
+			var result = 1;
+			for(var i=0;i<arguments.length;i++)
+			{
+				result *= arguments[i];
+			}
+			return result;
+		}
+		console.log(mxy(2,3,6,8));
+	</script>
+</body>
+</html>

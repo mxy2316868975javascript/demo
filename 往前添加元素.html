@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>往前添加元素</title>
+	<script>
+	window.onload = function ()
+	{
+		var oBtn = document.getElementsByTagName('input')[0];
+		var oTxt = document.getElementsByTagName('input')[1];
+		var oUl = document.createElement('ul');
+		document.body.appendChild(oUl);
+
+		oBtn.onclick = function ()
+		{
+			
+			var oLi = document.createElement('li');
+			var aLi = document.getElementsByTagName('li');
+			
+			oLi.innerHTML = oTxt.value;
+			
+			if(aLi.length>0)
+			{
+				oUl.insertBefore(oLi,aLi[0]);
+			}
+			else
+			{
+				oUl.appendChild(oLi);
+			}
+		}
+	}
+	</script>
+</head>
+<body>
+	<input type="button" value='创建元素'>
+	<input type="text" value=''>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>删除节点</title>
+	<script>
+	window.onload = function ()
+	{
+		var aA = document.getElementsByTagName('a');
+		var oUl = document.getElementsByTagName('ul')[0];
+		for(var i=0;i<aA.length;i++)
+		{
+			aA[i].onclick = function()
+			{
+				oUl.removeChild(this.parentNode);
+			}
+		}
+	}
+	</script>
+</head>
+<body>
+	<ul>
+		<li>sadasd <a href="javascript:;">删除</a></li>
+		<li>sadasd <a href="javascript:;">删除</a></li>
+		<li>sadasd <a href="javascript:;">删除</a></li>
+		<li>sadasd <a href="javascript:;">删除</a></li>
+		<li>sadasd <a href="javascript:;">删除</a></li>
+		<li>sadasd <a href="javascript:;">删除</a></li>
+		<li>sadasd <a href="javascript:;">删除</a></li>
+		<li>sadasd <a href="javascript:;">删除</a></li>
+	</ul>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		#div1 {
+			width: 100px;
+			height: 100px;
+			background: red;
+		}
+	</style>
+	<script>
+		window.onload = function ()
+		{
+			var oDiv = document.getElementById('div1');
+			alert(getStyle(oDiv,'width'));
+			// if(oDiv.currentStyle)
+			// {
+			// 	console.log(oDiv.currentStyle.width);
+			// }
+			// else
+			// {
+			// 	console.log(getComputedStyle(oDiv,false).width);
+			// }
+		}
+		// 函数封装
+		function getStyle(obj,name)
+		{
+			if(obj.currentStyle)
+			{
+				return obj.currentStyle[name];
+			}
+			else
+			{
+				return getComputedStyle(obj,false)[name];
+			}
+		}
+	</script>
+</head>
+<body>
+	<div id='div1'></div>
+</body>
+</html>

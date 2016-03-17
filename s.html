@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+	document.getElementsByTagName('')
+	</script>
+</head>
+<body>
+	<script>//创建正则，匹配正则;
+	var box = new RegExp('Box','ig');//创建对象正则,模式正则;
+	console.log(box);
+	var bo1 = /box/ig;//字面量正则，i：忽略大小写 m:多行匹配，g:全局匹配;
+	console.log(bo1);
+	var box3 = new RegExp('Box','i');//模式正则;
+	var bo3 = 'box';
+	console.log(box3.test(bo3));
+	var box4 = /Box/i;//字面量正则;
+	var bo4 = 'box';
+	console.log(box4.test(bo4));
+	console.log(/Box/i.test('box'));
+	var box5 = /Box/i;//字符串中是否包含box的正则;
+	var bo5 = 'This is a box';
+	console.log(box5.test(bo5));
+	//exec()    如果正则匹配返回数组中的值，如果没有返回null;
+	</script>]
+
+
+
+	<script>//字符串匹配模式；
+	var obj = /box/ig;//开启全局匹配模式
+	var str = 'this is a Box! that is a Box';
+	console.log(str.match(obj));//返回数组，如果未开启全局模式，只返回第一个数组所匹配的正则；
+	console.log(str.search(obj))//返回正则位置搜索功能，无需开始g全局功能;如果为搜索到正则，则返回-1;
+	console.log(str.replace(obj,'Tom'));//返回修改过后的字符串，若开启全局返回数组全部内容，若未开启全局匹配功能只修改数组第一个匹配的正则然后返回该字符串;
+	var obj = / /;
+	var str = 'this is a box! that is a box';
+	console.log(str.split(obj));//分割数组然后返回字符串;
+	</script>
+
+
+
+	<script>//正则的静态属性;无需全局功能
+	var go = /google/i;
+	var dog = 'this is a google!';
+	console.log(go.test(dog));
+	console.log(RegExp.input);//返回当前所匹配的字符串;
+	console.log(RegExp.leftContext)//返回匹配正则的前子串;
+	console.log(RegExp.rightContext)//返回匹配正则的右子串;
+	console.log(RegExp.lastMatch)//返回匹配到最后的正则;
+	</script>
+</body>
+</html>
